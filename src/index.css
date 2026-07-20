@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans transition-colors duration-500 min-h-screen text-gray-800 m-0 p-0 overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .theme-default { @apply bg-gradient-to-br from-[#f5f7fa] to-[#c3cfe2]; }
+  .theme-gamer { @apply bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364] text-white; }
+  .theme-y2k { @apply bg-gradient-to-br from-[#ff9a9e] via-[#fecfef] to-[#fecfef]; }
+  .theme-idol { @apply bg-gradient-to-br from-[#a18cd1] to-[#fbc2eb]; }
+  .theme-cafe { @apply bg-gradient-to-br from-[#d4fc79] to-[#96e6a1]; }
+  .theme-meme { @apply bg-gradient-to-br from-[#f6d365] to-[#fda085]; }
+
+  .glass-panel {
+    @apply bg-white/90 backdrop-blur-md rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.1)] border border-white/50;
+  }
+  
+  .theme-gamer .glass-panel {
+    @apply bg-slate-900/85 border-sky-400 text-slate-200;
+  }
+
+  .btn-cute {
+    @apply transition-all duration-200 shadow-sm hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-md cursor-pointer;
+  }
+}
